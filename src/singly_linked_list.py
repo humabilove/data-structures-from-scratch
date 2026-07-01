@@ -37,7 +37,7 @@ class SinglyLinkedList:
         
     def __getitem__(self, index):
         """index번째 노드의 데이터. head부터 index칸 전진 -> O(n)"""
-        if not 0 <= index <= self._size:
+        if not 0 <= index < self._size:
             raise IndexError("list index out of range")
         current = self._head
         for _ in range(index):
